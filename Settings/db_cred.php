@@ -1,17 +1,10 @@
 <?php
 
-define("DB_NAME", "shoppn");
-define("DB_SERVER", "localhost");
-define("DB_USERNAME", "root");
-define("DB_PASSWORD", "");
-
-?> 
-<?php
-
-// define("DB_NAME", "id19735913_shoppn");
-// define("DB_SERVER", "localhost");
-// define("DB_USERNAME", "id19735913_ogechi");
-// define("DB_PASSWORD", "E#ZnM9ddl5WW@1b4");
+define("DB_NAME", "heroku_3c7a5a960eead28");
+define("DB_SERVER", "us-cdbr-east-06.cleardb.net");
+define("DB_USERNAME", "bd9969aef0f07a");
+define("DB_PASSWORD", "9c2fc5f3");
 
 
 ?>
+
