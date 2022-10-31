@@ -5,7 +5,8 @@ if(isset($_POST['register_auser'])){
 
     $customer_name = $_POST['username'];
     $customer_email = $_POST['email'];
-    $customer_pass = password_hash($_POST['password'],Default_password);
+    $customer_pass = $_POST["customer_pass"];
+    $customer_pass=password_hash($customer_pass,PASSWORD_DEFAULT);
     $customer_country = $_POST['country'];
     $customer_city = $_POST['city'];
     $customer_contact = $_POST['contact'];
