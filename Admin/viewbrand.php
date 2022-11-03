@@ -28,7 +28,7 @@
                 <thead>
                     <tr>
                         <th style="font-size:30px;">#</th>
-                        <th style="font-size:30px;">Brands</th>
+                        <th style="font-size:30px;">Bsrands</th>
                         <th style="font-size:30px;">Actions</th>
                     </tr>
                 </thead>
