@@ -38,12 +38,12 @@
                     include("../controllers/product_controller.php");
                         // fetching all the brands.
                         $brand_items = select_all_brand_ctr();
-                        print_r($brand_items);
-                        foreach ($brand_items as $brand) {
+                        $i=0;
+                        while ($i<count($brand_items)) {
                     ?>
                         <tr>
-                            <td a><?php echo $brand['brand_id'];?></td>
-                            <td a><?php echo $brand['brand_name'];?></td>
+                            <td ><?php echo $brand['brand_id'];?></td>
+                            <td ><?php echo $brand['brand_name'];?></td>
                             <td>
                                 <form action="../Actions/update_brand.php" method="GET">
                                     <input type="hidden" name="brand_id" value='<?php echo $brand['brand_id'];?>'>
@@ -59,7 +59,9 @@
                                 </form>
                             </td>
                         </tr>
-                        <?php }?>
+                        <?php
+                        $i++;
+                     }?>
                 </tbody> 
             </table>
         </div>
