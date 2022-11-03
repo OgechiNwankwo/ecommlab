@@ -240,7 +240,9 @@ $(document).ready(function(){
                 <?php
                         // fetching all the brands.
                         $brand_items = select_all_brand_ctr();
+                        print_r ($brand_items);
                         foreach ($brand_items as $brand) {
+                            
                     ?>
                     <tr>
                         <td>1</td>
