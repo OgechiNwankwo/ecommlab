@@ -38,6 +38,7 @@
                     include("../controllers/product_controller.php");
                         // fetching all the brands.
                         $brand_items = select_all_brand_ctr();
+                        print_r($brand_items);
                         foreach ($brand_items as $brand) {
                     ?>
                         <tr>
