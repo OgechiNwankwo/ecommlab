@@ -1,6 +1,6 @@
 <?php
     // include("../settings/core.php");
-    include("../controllers/product_controller.php");
+    
 ?>
 
 
@@ -35,7 +35,7 @@
 
                 <tbody>
                     <?php
-                    
+                    include("../controllers/product_controller.php");
                         // fetching all the brands.
                         $brand_items = select_all_brand_ctr();
                         foreach ($brand_items as $brand) {
