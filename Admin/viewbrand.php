@@ -42,8 +42,8 @@
                         while ($i<count($brand_items)) {
                     ?>
                         <tr>
-                            <td ><?php echo $brand['brand_id'];?></td>
-                            <td ><?php echo $brand['brand_name'];?></td>
+                            <td ><?php echo $brand[$i]['brand_id'];?></td>
+                            <td ><?php echo $brand[$i]['brand_name'];?></td>
                             <td>
                                 <form action="../Actions/update_brand.php" method="GET">
                                     <input type="hidden" name="brand_id" value='<?php echo $brand['brand_id'];?>'>
