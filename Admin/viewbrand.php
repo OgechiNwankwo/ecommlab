@@ -1,5 +1,5 @@
 <?php
-    include("../settings/core.php");
+    // include("../settings/core.php");
     include("../controllers/product_controller.php");
 ?>
 
