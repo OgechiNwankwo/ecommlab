@@ -50,7 +50,7 @@
                                 </form>
                             </td>
                             <td>
-                                <form action="../actions/delete_brand.php" method="POST">
+                                <form action="../Actions/delete_brand.php" method="POST">
                                     <input type="hidden" name="brand_id" value='<?php echo $brand['brand_id']?>'>
                                     <input type="hidden" name="brand_name" value='<?php echo $brand['brand_name']?>'>
                                     <button class= 'btn btn-danger btn-sm' type="submit" name="delete_brand">Delete</button>
