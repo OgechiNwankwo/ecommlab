@@ -40,8 +40,8 @@
                         $brand_items = select_all_brand_ctr();
                         foreach ($brand_items as $brand) {
                     ?>
-                        <tr>
-                            <td a><?php echo $brand['brand_id']?></td>
+                       <?php echo "<tr>" ?>
+                             <td a><?php echo $brand['brand_id']?></td>
                             <td a><?php echo $brand['brand_name']?></td>
                             <td>
                                 <form action="../Actions/update_brand.php" method="GET">
