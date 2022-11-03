@@ -42,19 +42,19 @@
                         while ($i<count($brand_items)) {
                     ?>
                         <tr>
-                            <td ><?php echo $brand[$i]['brand_id'];?></td>
-                            <td ><?php echo $brand[$i]['brand_name'];?></td>
+                            <td ><?php echo $brand_items[$i]['brand_id'];?></td>
+                            <td ><?php echo $brand_items[$i]['brand_name'];?></td>
                             <td>
                                 <form action="../Actions/update_brand.php" method="GET">
-                                    <input type="hidden" name="brand_id" value='<?php echo $brand['brand_id'];?>'>
-                                    <input type="hidden" name="brand_name" value='<?php echo $brand['brand_name'];?>'>
+                                    <input type="hidden" name="brand_id" value='<?php echo $brand_items[$i]['brand_id'];?>'>
+                                    <input type="hidden" name="brand_name" value='<?php echo $brand_items[$i]['brand_name'];?>'>
                                     <button class= "btn btn-success btn-sm" type="submit" name="update_brand">Update</button>
                                 </form>
                             </td>
                             <td>
                                 <form action="../actions/delete_brand.php" method="POST">
-                                    <input type="hidden" name="brand_id" value='<?php echo $brand['brand_id'];?>'>
-                                    <input type="hidden" name="brand_name" value='<?php echo $brand['brand_name'];?>'>
+                                    <input type="hidden" name="brand_id" value='<?php echo $brand_items[$i]['brand_id'];?>'>
+                                    <input type="hidden" name="brand_name" value='<?php echo $brand_items[$i]['brand_name'];?>'>
                                     <button class= 'btn btn-danger btn-sm' type="submit" name="delete_brand">Delete</button>
                                 </form>
                             </td>
