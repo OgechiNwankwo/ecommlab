@@ -52,6 +52,7 @@
 								}
 							}
 							displayAllCtr();
+                            
 							?>
 						</tbody>
             </table>
