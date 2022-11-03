@@ -238,6 +238,7 @@ $(document).ready(function(){
                 </thead>
                 <tbody>
                 <?php
+                include("../controllers/product_controller.php");
                 
                         // fetching all the brands.
                         $brand_items = select_all_brand_ctr();
@@ -247,7 +248,7 @@ $(document).ready(function(){
                     ?>
                     <tr>
                         <td>1</td>
-                        <td><?php echo $brand_items[$brand]['brand_name']?></td>
+                        <td><?php echo $brand['brand_name']?></td>
                        
                         <td>
                             <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
