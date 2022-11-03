@@ -33,29 +33,33 @@
                     </tr>
                 </thead>
 
-               
-
                 <tbody>
-							<?php
-							function displayAllCtr()
-							{
-								$result = select_all_brand_ctr();
-								for ($i = 0; $i < count($result); $i++) {
-									echo "<tr>";
-									echo "<td>" . $result[$i]['brand_name'] . "</td>";
-									echo "<th><form action='edit_brand.php' method='POST'>
-			<input type='submit' value='edit'  name='edit'>
-			<input type='hidden' name='brand_id' value='" . $result[$i]['brand_id'] . "'></form></th>";
-
-									echo "<th><form action='delete_brand.php' method='POST'>
-			<input type='submit' value='delete'  name='delete'>
-			<input type='hidden' name='brand_id' value='" . $result[$i]['brand_id'] . "'></form></th>";
-									echo "</tr>";
-								}
-							}
-							displayAllCtr();
-							?>
-						</tbody>
+                    <?php
+                    
+                        // fetching all the brands.
+                        $brand_items = select_all_brand_ctr();
+                        foreach ($brand_items as $brand) {
+                    ?>
+                        <tr>
+                            <td a><?php echo $brand['brand_id']?></td>
+                            <td a><?php echo $brand['brand_name']?></td>
+                            <td>
+                                <form action="../Actions/update_brand.php" method="GET">
+                                    <input type="hidden" name="brand_id" value='<?php echo $brand['brand_id']?>'>
+                                    <input type="hidden" name="brand_name" value='<?php echo $brand['brand_name']?>'>
+                                    <button class= "btn btn-success btn-sm" type="submit" name="update_brand">Update</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="../actions/delete_brand.php" method="POST">
+                                    <input type="hidden" name="brand_id" value='<?php echo $brand['brand_id']?>'>
+                                    <input type="hidden" name="brand_name" value='<?php echo $brand['brand_name']?>'>
+                                    <button class= 'btn btn-danger btn-sm' type="submit" name="delete_brand">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <?php }?>
+                </tbody> 
             </table>
         </div>
    </body>
@@ -238,13 +242,9 @@ $(document).ready(function(){
                 </thead>
                 <tbody>
                 <?php
-                include("../controllers/product_controller.php");
-                
                         // fetching all the brands.
                         $brand_items = select_all_brand_ctr();
-                        print_r ($brand_items);
                         foreach ($brand_items as $brand) {
-                            
                     ?>
                     <tr>
                         <td>1</td>
