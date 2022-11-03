@@ -1,6 +1,6 @@
 <?php
     include("../settings/core.php");
-    include("../controllers/product_controller.php");
+    include("../Controllers/product_controller.php");
 ?>
 
 
