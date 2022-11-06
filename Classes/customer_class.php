@@ -29,3 +29,4 @@ class customer_class  extends db_connection{
 	
 	
 }
+?>

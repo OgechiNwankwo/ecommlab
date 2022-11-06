@@ -70,4 +70,28 @@ function update_cat_ctr($cat_id,$my_cat){
     $upda= new product_class();
     return $upda->update_a_cat_cls($cat_id,$my_cat);
 }
+
+
+//Add Product 
+function insert_prod_ctr($product_brand,$product_cat,$product_title,$product_price,$product_desc,$product_image,$product_Key){
+    $insertprod = new product_class();
+  
+    return $insertprod->insert_prod_cls($product_brand,$product_cat,$product_title,$product_price,$product_desc,$product_image,$product_Key);
+  }
+  
+  function select_one_prod_ctr($prod_id){
+    $select_contr = new product_class(); 
+    return  $select_contr-> select_one_prod_cls($prod_id);
+  }
+  function select_all_prod_ctr(){
+    $selectall = new product_class();
+    return $selectall-> select_prod_cls();
+  }
+
+  
+  function update_product($prod_id,$brand,$cat,$title,$pNum,$pDesc,$pKey,$folder_path){
+    $select_contr = new product_class(); 
+   
+    return  $select_contr->update_product_cls($prod_id,$brand,$cat,$title,$pNum,$pDesc,$pKey,$folder_path);
+  }
 ?>

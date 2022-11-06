@@ -62,8 +62,41 @@
             return $this->db_query($mysql);
         }
 
-    }
-          
     
+          
+    //Add Product 
+    function insert_prod_cls($product_brand,$product_cat,$product_title,$product_price,$product_desc,$product_image,$product_Key)
+    {
+        $mysql = "INSERT INTO `products` (product_cat,product_brand,product_title,product_price,product_desc,product_image,product_keywords)
+        VALUES ('$product_cat','$product_brand','$product_title','$product_price','$product_desc','$product_image','$product_Key')";
+        return $this->db_query($mysql);    
+    }
+
+    function select_prod_cls()
+    {
+        $mysql = "SELECT * FROM `products`";
+
+        return $this->db_fetch_all($mysql);
+    }
+
+    function select_one_prod_cls($prod_id)
+    {
+        $mysql = "SELECT * FROM `products` WHERE product_id = '$prod_id'";
+        return $this->db_fetch_one($mysql);
+
+    }
+
+    function update_product_cls($prod_id,$my_brand,$my_cat,$prod_title,$prod_prix,$prod_desc,$prod_key,$folder_path)
+    {
+    $mysql = "UPDATE `products` SET product_brand = '$my_brand', product_cat= '$my_cat',product_title= '$prod_title', 
+    product_price= '$prod_prix',product_desc= '$prod_desc',product_key= '$prod_key',product_image= '$folder_path'
+    WHERE product_id = '$prod_id'";
+
+
+    return $this->db_query($mysql);
+
+    }
+
+}
 ?>
 
